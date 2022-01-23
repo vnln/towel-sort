@@ -1,6 +1,4 @@
-
-// You should implement your task here.
-
-module.exports = function towelSort (matrix) {
-  return [];
-}
+module.exports = towelSort = (matrix) =>
+    matrix
+        ? [].concat(...matrix.map((x, idx) => (idx % 2 ? x.reverse() : x)))
+        : [];
